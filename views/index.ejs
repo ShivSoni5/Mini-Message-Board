@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <a href="/new">New Message</a>
+  <h1><%= title %></h1>
+  <ul>
+    <% for(const msg of messages) {%>
+    <li>
+      <div>
+        <sub><%=formatDate(msg.createdOn, {addSuffix: true})%></sub>
+      </div>
+      <div>
+        <strong>
+          <%=msg.user%>
+        </strong>
+      </div>
+      <%=msg.text%>
+    </li>
+    <% } %>
+  </ul>
+</body>
+
+</html>
