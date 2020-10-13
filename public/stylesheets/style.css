@@ -24,13 +24,33 @@ ul li {
   font-size: 1em;
 }
 
+@media only screen and (max-width: 768px) {
+  ul li {
+    margin-bottom: 15px;
+    box-shadow: 0 3px 7px #00577759;
+    width: 80%;
+    border-radius: 2px;
+    font-size: 2em;
+    transition: 0.2s ease;
+    padding: 5px;
+    word-wrap: break-word;
+  }
+  a {
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  ul {
+    padding-inline-start: unset;
+  }
+}
+
 ul li:hover {
   left: 5px;
 }
 
 sub {
-  /* font-weight: bold; */
-  /* color: rgb(138, 138, 138); */
   opacity: 0.7;
 }
 
@@ -46,15 +66,29 @@ input {
   width: 360px;
   margin-bottom: 15px;
   transition: 0.2s ease;
+  font-size: 16px;
+  height: 32px;
 }
 
-input:focus {
-  outline: none;
-  box-shadow: 0px 2px 5px #00577759;
+@media only screen and (max-width: 768px) {
+  input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: 0.2s ease;
+    height: 50px;
+    font-size: 2em;
+  }
 }
 
 input[type='submit'] {
   background-color: #53899e;
   color: white;
-  height: 30px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0px 2px 5px #00577759;
 }
